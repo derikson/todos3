@@ -8,6 +8,7 @@
     <a href="/blog/new">New Post</a>
   </p>
 
+  {#if _posts.any?}
   {#each _posts as post}
     <h2><a href="/blog/{post._id}">{post._title}</a></h2>
     <p>
@@ -17,4 +18,5 @@
 
     <p>{post._body}</p>
 
+  {/}
   {/}
